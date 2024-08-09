@@ -51,6 +51,14 @@ public interface SiloLocation {
     String getWorld();
 
     /**
+     * Converts the silo location to a Bukkit location.
+     *
+     * @return the Bukkit location
+     * @since 1.0
+     */
+    Location toBukkitLocation();
+
+    /**
      * Checks whether the bukkit location is equal to the silo location.
      *
      * @param location the bukkit location

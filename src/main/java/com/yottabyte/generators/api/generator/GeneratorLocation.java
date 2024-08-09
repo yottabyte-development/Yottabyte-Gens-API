@@ -69,6 +69,7 @@ public interface GeneratorLocation {
     /**
      * Updates the generator at the location.
      *
+     * @param generator the generator to update
      * @since 1.0
      */
     void updateGenerator(Generator generator);

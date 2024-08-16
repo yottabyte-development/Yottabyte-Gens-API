@@ -89,6 +89,15 @@ public interface SiloManager {
     Optional<PlayerSilo> getPlayerSilo(Player owner, Location location);
 
     /**
+     * Returns whether a location is a player silo.
+     *
+     * @param location the location to check
+     * @return <code>true</code> if the location is a player silo; <code>false</code> otherwise
+     * @since 1.0
+     */
+    boolean isPlayerSilo(Location location);
+
+    /**
      * Opens the silo menu for a player.
      *
      * @param player     the player to open the menu for

@@ -36,14 +36,6 @@ public interface PlayerGenerator {
     Generator getGenerator();
 
     /**
-     * Updates the generator at the location.
-     *
-     * @param generator the generator to update
-     * @since 1.0
-     */
-    void updateGenerator(Generator generator);
-
-    /**
      * Returns the location of the generator.
      *
      * @return the location of the generator

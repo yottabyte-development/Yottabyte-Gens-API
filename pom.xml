@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yottabyte</groupId>
+    <groupId>dev.yottabyte</groupId>
     <artifactId>generators-api</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-    <url>https://github.com/Wekylend/Yottabyte-Generators-API</url>
+    <url>https://github.com/yottabyte-development/Yottabyte-Generators-API</url>
 
     <name>Yottabyte-Generators-API</name>
     <description>The API for the Yottabyte-Generators plugin</description>

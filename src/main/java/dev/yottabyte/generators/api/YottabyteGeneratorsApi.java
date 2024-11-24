@@ -6,6 +6,7 @@ import dev.yottabyte.generators.api.level.LevelManager;
 import dev.yottabyte.generators.api.party.PartyManager;
 import dev.yottabyte.generators.api.prestige.PrestigeManager;
 import dev.yottabyte.generators.api.sell.SellManager;
+import dev.yottabyte.generators.api.sell.wand.SellWandManager;
 import dev.yottabyte.generators.api.silo.SiloManager;
 
 /**
@@ -70,6 +71,17 @@ public class YottabyteGeneratorsApi implements YottabyteGenerators {
     @Override
     public SellManager getSellManager() {
         return this.plugin.getSellManager();
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @return the sell wand manager
+     * @since 1.0
+     */
+    @Override
+    public SellWandManager getSellWandManager() {
+        return this.plugin.getSellWandManager();
     }
 
     /**

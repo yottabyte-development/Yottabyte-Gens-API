@@ -6,6 +6,7 @@ import dev.yottabyte.generators.api.level.LevelManager;
 import dev.yottabyte.generators.api.party.PartyManager;
 import dev.yottabyte.generators.api.prestige.PrestigeManager;
 import dev.yottabyte.generators.api.sell.SellManager;
+import dev.yottabyte.generators.api.sell.wand.SellWandManager;
 import dev.yottabyte.generators.api.silo.SiloManager;
 
 /**
@@ -40,6 +41,14 @@ public interface YottabyteGenerators {
     SellManager getSellManager();
 
     /**
+     * Returns the sell wand manager.
+     *
+     * @return the sell wand manager
+     * @since 1.0
+     */
+    SellWandManager getSellWandManager();
+
+    /**
      * Returns the level manager.
      *
      * @return the level manager
@@ -57,6 +66,7 @@ public interface YottabyteGenerators {
 
     /**
      * Returns the party manager.
+     *
      * @return the party manager
      * @since 1.0
      */

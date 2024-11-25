@@ -12,5 +12,5 @@ public interface DropsMultiplierParty extends Party {
      * @return the drops multiplier
      * @since 1.0
      */
-    int getDropsMultiplier();
+    int getMultiplier();
 }

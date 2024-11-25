@@ -9,6 +9,7 @@ import dev.yottabyte.generators.api.BaseEnum;
  */
 public enum PartyType implements BaseEnum {
     SELL_MULTIPLIER,
+    XP_MULTIPLIER,
     DROPS_MULTIPLIER;
 
     /**

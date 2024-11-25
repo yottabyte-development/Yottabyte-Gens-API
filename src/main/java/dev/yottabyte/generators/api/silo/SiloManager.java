@@ -40,25 +40,23 @@ public interface SiloManager {
     boolean isSiloByItem(ItemStack itemStack);
 
     /**
-     * Builds a silo item with a specified amount.
+     * Builds a silo item.
      * <p>
      * The silo item is specified in the <code>config.yml</code> configuration file.
      * The configuration section: <code>silos.item</code>
      *
-     * @param amount the amount of items to build
      * @return the silo item
      * @since 1.0
      */
-    ItemStack buildSiloItem(int amount);
+    ItemStack buildSiloItem();
 
     /**
      * Gives a silo item to an online player.
      *
      * @param player the player to give the silo item to
-     * @param amount the amount of items to build and give
      * @since 1.0
      */
-    void giveSiloItem(Player player, int amount);
+    void giveSiloItem(Player player);
 
     /**
      * Creates a silo at a specified location.

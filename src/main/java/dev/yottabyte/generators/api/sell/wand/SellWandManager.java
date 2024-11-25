@@ -37,23 +37,21 @@ public interface SellWandManager {
      * The configuration section: <code>sell-wands</code>
      *
      * @param sellWand the sell wand for which to build the item
-     * @param amount   the amount of sell wands to build
      * @param uses     the amount of uses the sell wand has (use -1 for infinite uses, null for default uses)
      * @return the sell wand item
      * @since 1.0
      */
-    ItemStack buildSellWandItem(SellWand sellWand, int amount, Integer uses);
+    ItemStack buildSellWandItem(SellWand sellWand, Integer uses);
 
     /**
      * Gives a sell wand to an online player.
      *
      * @param player   the player to give the sell wand to
      * @param sellWand the sell wand to build and give
-     * @param amount   the amount of items to build and give
      * @param uses     the amount of uses the sell wand has (use -1 for infinite uses, null for default uses)
      * @since 1.0
      */
-    void giveSellWand(Player player, SellWand sellWand, int amount, Integer uses);
+    void giveSellWand(Player player, SellWand sellWand, Integer uses);
 
     /**
      * Returns the amount of uses a sell wand has from an item stack.

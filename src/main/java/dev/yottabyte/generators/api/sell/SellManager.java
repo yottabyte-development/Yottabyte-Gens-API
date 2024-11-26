@@ -1,6 +1,7 @@
 package dev.yottabyte.generators.api.sell;
 
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.UUID;
@@ -52,17 +53,20 @@ public interface SellManager {
      * Sells the item in the player's main hand.
      *
      * @param player the player to sell the item for
+     * @return the {@link SellData} object containing the total item count, sell price, and sell level XP
      * @since 1.0
      */
-    void sellMainHand(Player player);
+    SellData sellMainHand(Player player);
 
     /**
-     * Sells all items in the player's inventory.
+     * Sells all items in an inventory.
      *
-     * @param player the player to sell the items for
+     * @param player    the player to sell the items for
+     * @param inventory the inventory to sell the items for
+     * @return the {@link SellData} object containing the total item count, sell price, and sell level XP
      * @since 1.0
      */
-    void sellInventory(Player player);
+    SellData sellInventory(Player player, Inventory inventory);
 
     /**
      * Creates a sellable item.

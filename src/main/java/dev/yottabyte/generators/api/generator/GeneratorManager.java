@@ -86,6 +86,15 @@ public interface GeneratorManager {
     void giveGeneratorItem(Player player, Generator generator, int amount);
 
     /**
+     * Opens the generator locations menu for a player.
+     *
+     * @param player the player to open the menu for
+     * @param target the target player to view the locations of
+     * @since 1.0
+     */
+    void openGeneratorLocationsMenu(Player player, Player target);
+
+    /**
      * Creates a generator at a specified block location.
      *
      * @param player    the player creating the generator (owner of the generator)

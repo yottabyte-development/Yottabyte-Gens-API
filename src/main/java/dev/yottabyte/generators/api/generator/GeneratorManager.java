@@ -100,9 +100,10 @@ public interface GeneratorManager {
      *
      * @param player          the online owner of the generator
      * @param playerGenerator the generator to remove
+     * @param breakBlock      <code>true</code> to break the block; <code>false</code> otherwise
      * @since 1.0
      */
-    void removeGenerator(Player player, PlayerGenerator playerGenerator);
+    void removeGenerator(Player player, PlayerGenerator playerGenerator, boolean breakBlock);
 
     /**
      * Disables all generators on the server.

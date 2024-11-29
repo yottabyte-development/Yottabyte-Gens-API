@@ -12,5 +12,5 @@ public interface XpMultiplierParty extends Party {
      * @return the XP multiplier
      * @since 1.0
      */
-    int getMultiplier();
+    double getMultiplier();
 }

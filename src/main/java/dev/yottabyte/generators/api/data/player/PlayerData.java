@@ -238,26 +238,74 @@ public interface PlayerData {
     void setPrestigeLevel(int prestigeLevel);
 
     /**
-     * Returns the player's multiplier.
+     * Returns the player's money multiplier.
      *
-     * @return the player's multiplier (null if not set)
+     * @return the player's money multiplier (null if not set)
      * @since 1.0
      */
-    Double getMultiplier();
+    Double getMoneyMultiplier();
 
     /**
-     * Adds to the player's multiplier.
+     * Adds to the player's money multiplier.
      *
-     * @param multiplier the multiplier value to add
+     * @param multiplier the money multiplier value to add
      * @since 1.0
      */
-    void addMultiplier(double multiplier);
+    void addMoneyMultiplier(double multiplier);
 
     /**
-     * Sets the player's multiplier.
+     * Sets the player's money multiplier.
      *
-     * @param multiplier the multiplier to set
+     * @param multiplier the money multiplier to set
      * @since 1.0
      */
-    void setMultiplier(double multiplier);
+    void setMoneyMultiplier(double multiplier);
+
+    /**
+     * Returns the player's XP multiplier.
+     *
+     * @return the player's XP multiplier (null if not set)
+     * @since 1.0
+     */
+    Double getXpMultiplier();
+
+    /**
+     * Adds to the player's XP multiplier.
+     *
+     * @param multiplier the XP multiplier value to add
+     * @since 1.0
+     */
+    void addXpMultiplier(double multiplier);
+
+    /**
+     * Sets the player's XP multiplier.
+     *
+     * @param multiplier the XP multiplier to set
+     * @since 1.0
+     */
+    void setXpMultiplier(double multiplier);
+
+    /**
+     * Returns the player's drops multiplier.
+     *
+     * @return the player's drops multiplier (null if not set)
+     * @since 1.0
+     */
+    Integer getDropsMultiplier();
+
+    /**
+     * Adds to the player's drops multiplier.
+     *
+     * @param multiplier the drops multiplier value to add
+     * @since 1.0
+     */
+    void addDropsMultiplier(int multiplier);
+
+    /**
+     * Sets the player's drops multiplier.
+     *
+     * @param multiplier the drops multiplier to set
+     * @since 1.0
+     */
+    void setDropsMultiplier(int multiplier);
 }

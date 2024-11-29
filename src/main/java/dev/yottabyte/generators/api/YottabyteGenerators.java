@@ -3,6 +3,7 @@ package dev.yottabyte.generators.api;
 import dev.yottabyte.generators.api.data.DataManager;
 import dev.yottabyte.generators.api.generator.GeneratorManager;
 import dev.yottabyte.generators.api.level.LevelManager;
+import dev.yottabyte.generators.api.multiplier.MultiplierManager;
 import dev.yottabyte.generators.api.party.PartyManager;
 import dev.yottabyte.generators.api.prestige.PrestigeManager;
 import dev.yottabyte.generators.api.sell.SellManager;
@@ -31,6 +32,14 @@ public interface YottabyteGenerators {
      * @since 1.0
      */
     SiloManager getSiloManager();
+
+    /**
+     * Returns the multiplier manager.
+     *
+     * @return the multiplier manager
+     * @since 1.0
+     */
+    MultiplierManager getMultiplierManager();
 
     /**
      * Returns the sell manager.

@@ -30,4 +30,20 @@ public interface SellData {
      * @since 1.0
      */
     long getTotalSellXP();
+
+    /**
+     * Returns the money multiplier of the items.
+     *
+     * @return the money multiplier of the items
+     * @since 1.0
+     */
+    double getTotalMoneyMultiplier();
+
+    /**
+     * Returns the XP multiplier of the items.
+     *
+     * @return the XP multiplier of the items
+     * @since 1.0
+     */
+    double getTotalXpMultiplier();
 }

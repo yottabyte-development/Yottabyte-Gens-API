@@ -1,16 +1,16 @@
-package dev.yottabyte.generators.api.party;
+package dev.yottabyte.generators.api.multiplier;
 
 import dev.yottabyte.generators.api.BaseEnum;
 
 /**
- * Represents a party type.
+ * Represents a multiplier type.
  *
  * @since 1.0
  */
-public enum PartyType implements BaseEnum {
-    MONEY_MULTIPLIER,
-    XP_MULTIPLIER,
-    DROPS_MULTIPLIER;
+public enum MultiplierType implements BaseEnum {
+    MONEY,
+    XP,
+    DROPS;
 
     /**
      * {@inheritDoc}
@@ -20,6 +20,6 @@ public enum PartyType implements BaseEnum {
      */
     @Override
     public BaseEnum getDefaultValue() {
-        return PartyType.MONEY_MULTIPLIER;
+        return MultiplierType.MONEY;
     }
 }

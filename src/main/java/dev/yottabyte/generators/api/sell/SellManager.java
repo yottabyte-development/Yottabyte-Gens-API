@@ -1,10 +1,9 @@
 package dev.yottabyte.generators.api.sell;
 
+import dev.yottabyte.generators.api.sell.wand.SellWand;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-
-import java.util.UUID;
 
 /**
  * The manager for sell related operations.
@@ -12,35 +11,6 @@ import java.util.UUID;
  * @since 1.0
  */
 public interface SellManager {
-    /**
-     * Returns the sell multiplier for the player.
-     *
-     * @param uuid the player's UUID
-     * @return the player's sell multiplier
-     * @since 1.0
-     */
-    double getPlayerMultiplier(UUID uuid);
-
-    /**
-     * Adds to the sell multiplier for the player.
-     *
-     * @param uuid       the player's UUID
-     * @param multiplier the multiplier value to add
-     * @return <code>true</code> if the multiplier was added; otherwise <code>false</code>
-     * @since 1.0
-     */
-    boolean addPlayerMultiplier(UUID uuid, double multiplier);
-
-    /**
-     * Sets the sell multiplier for the player.
-     *
-     * @param uuid       the player's UUID
-     * @param multiplier the multiplier to set
-     * @return <code>true</code> if the multiplier was set; otherwise <code>false</code>
-     * @since 1.0
-     */
-    boolean setPlayerMultiplier(UUID uuid, double multiplier);
-
     /**
      * Returns the sell data calculator.
      *
@@ -63,10 +33,11 @@ public interface SellManager {
      *
      * @param player    the player to sell the items for
      * @param inventory the inventory to sell the items for
+     * @param sellWand  the sell wand used to sell the items with (can be <code>null</code>)
      * @return the {@link SellData} object containing the total item count, sell price, and sell level XP
      * @since 1.0
      */
-    SellData sellInventory(Player player, Inventory inventory);
+    SellData sellInventory(Player player, Inventory inventory, SellWand sellWand);
 
     /**
      * Creates a sellable item.

@@ -129,10 +129,11 @@ public interface SiloManager {
      * <p>
      * The sell data includes the total items, total price, and total level XP.
      *
+     * @param player     the player to calculate the sell data for
      * @param playerSilo the silo to calculate the sell data for
      * @return the silo sell data
      * @see #sellSiloContents
      * @since 1.0
      */
-    SellData getSiloSellData(PlayerSilo playerSilo);
+    SellData getSiloSellData(Player player, PlayerSilo playerSilo);
 }

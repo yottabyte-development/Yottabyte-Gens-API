@@ -20,6 +20,28 @@ public interface SellWand {
     String getId();
 
     /**
+     * Returns the money multiplier of the sell wand.
+     * <p>
+     * This is specified in the sell wand's configuration file.
+     * The configuration section: <code>sell-wands.wand.money-multiplier</code>
+     *
+     * @return the money multiplier of the sell wand
+     * @since 1.0
+     */
+    double getMoneyMultiplier();
+
+    /**
+     * Returns the XP multiplier of the sell wand.
+     * <p>
+     * This is specified in the sell wand's configuration file.
+     * The configuration section: <code>sell-wands.wand.xp-multiplier</code>
+     *
+     * @return the XP multiplier of the sell wand
+     * @since 1.0
+     */
+    double getXpMultiplier();
+
+    /**
      * Returns the default amount of uses a sell wand has.
      * <p>
      * This is specified in the sell wand's configuration file.

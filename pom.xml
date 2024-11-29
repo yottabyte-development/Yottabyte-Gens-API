@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.yottabyte</groupId>
-    <artifactId>generators-api</artifactId>
+    <artifactId>gens-api</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
     <url>https://github.com/yottabyte-development/Yottabyte-Generators-API</url>
 
     <name>Yottabyte-Generators-API</name>
-    <description>The API for the Yottabyte-Generators plugin</description>
+    <description>The API for the Yottabyte-Gens plugin</description>
     <inceptionYear>2024</inceptionYear>
 
     <developers>
@@ -28,7 +28,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <build.finalName>yottabyte-generators-api-${project.version}</build.finalName>
+        <build.finalName>yottabyte-gens-api-${project.version}</build.finalName>
     </properties>
 
     <repositories>

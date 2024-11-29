@@ -160,10 +160,9 @@ public interface PlayerData {
     /**
      * Removes the silo from the player's data.
      *
-     * @param playerSilo the silo to remove
      * @since 1.0
      */
-    void removeSilo(PlayerSilo playerSilo);
+    void removeSilo();
 
     /**
      * Returns the player's XP.

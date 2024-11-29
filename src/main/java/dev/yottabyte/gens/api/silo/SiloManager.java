@@ -70,21 +70,30 @@ public interface SiloManager {
     /**
      * Removes player's silo.
      *
-     * @param player     the online owner of the silo
-     * @param playerSilo the silo to remove
+     * @param player       the online owner of the silo
+     * @param siloLocation the silo location to remove
+     * @param breakBlock   <code>true</code> to break the block; <code>false</code> otherwise
      * @since 1.0
      */
-    void removeSilo(Player player, PlayerSilo playerSilo);
+    void removeSilo(Player player, SiloLocation siloLocation, boolean breakBlock);
 
     /**
-     * Returns whether a player silo by its owner and location.
+     * Returns a player's silo.
      *
-     * @param owner    the online owner of the silo
-     * @param location the location of the silo
+     * @param player the player to get the silo for
      * @return the player silo, or an empty Optional if no player silo was found
      * @since 1.0
      */
-    Optional<PlayerSilo> getPlayerSilo(Player owner, Location location);
+    Optional<PlayerSilo> getPlayerSilo(Player player);
+
+    /**
+     * Returns a silo location by its Bukkit location.
+     *
+     * @param location the location of the silo
+     * @return the silo location, or an empty Optional if no silo location was found
+     * @since 1.0
+     */
+    Optional<SiloLocation> getSiloLocation(Location location);
 
     /**
      * Returns whether a location is a player silo.
@@ -94,16 +103,6 @@ public interface SiloManager {
      * @since 1.0
      */
     boolean isPlayerSilo(Location location);
-
-    /**
-     * Opens the silo menu for a player.
-     *
-     * @param player     the player to open the menu for
-     * @param playerSilo the player's silo
-     * @see #openPlayerSiloMenu(Player)
-     * @since 1.0
-     */
-    void openPlayerSiloMenu(Player player, PlayerSilo playerSilo);
 
     /**
      * Opens the silo menu for a player.

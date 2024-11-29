@@ -107,12 +107,12 @@ public interface GeneratorManager {
     /**
      * Removes a player's generator.
      *
-     * @param player          the online owner of the generator
-     * @param playerGenerator the generator to remove
-     * @param breakBlock      <code>true</code> to break the block; <code>false</code> otherwise
+     * @param player            the online owner of the generator
+     * @param generatorLocation the generator location to remove
+     * @param breakBlock        <code>true</code> to break the block; <code>false</code> otherwise
      * @since 1.0
      */
-    void removeGenerator(Player player, PlayerGenerator playerGenerator, boolean breakBlock);
+    void removeGenerator(Player player, GeneratorLocation generatorLocation, boolean breakBlock);
 
     /**
      * Disables all generators on the server.
@@ -144,40 +144,25 @@ public interface GeneratorManager {
      *
      * @param player the online owner of the generators
      * @return the set of all player generators owned by the player
-     * @see #getPlayerGenerator
-     * @see #isPlayerGenerator(UUID, Location)
      * @since 1.0
      */
     Set<PlayerGenerator> getPlayerGenerators(Player player);
 
     /**
-     * Returns a player generator by its owner and location.
+     * Returns a generator location by its Bukkit location.
+     * <p>
+     * Note: This method iterates over <b>all</b> generator locations on the server using <code>parallelStream()</code>.
      *
-     * @param owner    the online owner of the generator
      * @param location the location of the generator
-     * @return the player generator, or an empty Optional if no player generator was found
-     * @see #isPlayerGenerator(UUID, Location)
+     * @return the generator location, or an empty Optional if no generator location was found
      * @since 1.0
      */
-    Optional<PlayerGenerator> getPlayerGenerator(Player owner, Location location);
-
-    /**
-     * Checks if a specified location is a player generator owned by a player.
-     *
-     * @param uuid     the owner's UUID (can be offline)
-     * @param location the presumed location of the generator
-     * @return <code>true</code> if the location is a player generator owned by the player; <code>false</code> otherwise.
-     * @see #isPlayerGenerator(Location)
-     * @since 1.0
-     */
-    boolean isPlayerGenerator(UUID uuid, Location location);
+    Optional<GeneratorLocation> getGeneratorLocation(Location location);
 
     /**
      * Checks if a specified location is a player generator.
      * <p>
-     * Note: This method iterates over <b>all</b> player generators on the server.
-     * Although this method uses a <code>parallelStream()</code>, only use if necessary.
-     * It's recommended to use {@link #isPlayerGenerator(UUID, Location)} instead.
+     * Note: This method iterates over <b>all</b> player generators on the server using <code>parallelStream()</code>.
      *
      * @param location the presumed location of the generator
      * @return <code>true</code> if the location is a player generator; <code>false</code> otherwise.
@@ -244,9 +229,9 @@ public interface GeneratorManager {
     /**
      * Opens the generator upgrade menu for a player.
      *
-     * @param player          the player to open the menu for
-     * @param playerGenerator the generator to upgrade
+     * @param player            the player to open the menu for
+     * @param generatorLocation the generator location to upgrade
      * @since 1.0
      */
-    void openGeneratorUpgradeMenu(Player player, PlayerGenerator playerGenerator);
+    void openGeneratorUpgradeMenu(Player player, GeneratorLocation generatorLocation);
 }

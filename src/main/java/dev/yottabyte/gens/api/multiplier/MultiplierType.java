@@ -8,8 +8,17 @@ import dev.yottabyte.gens.api.BaseEnum;
  * @since 1.0
  */
 public enum MultiplierType implements BaseEnum {
+    /**
+     * Represents a money multiplier.
+     */
     MONEY,
+    /**
+     * Represents an XP multiplier.
+     */
     XP,
+    /**
+     * Represents a drops multiplier.
+     */
     DROPS;
 
     /**

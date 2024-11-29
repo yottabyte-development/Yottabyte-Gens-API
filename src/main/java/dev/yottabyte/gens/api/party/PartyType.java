@@ -8,8 +8,17 @@ import dev.yottabyte.gens.api.BaseEnum;
  * @since 1.0
  */
 public enum PartyType implements BaseEnum {
+    /**
+     * Represents a money multiplier party.
+     */
     MONEY_MULTIPLIER,
+    /**
+     * Represents an XP multiplier party.
+     */
     XP_MULTIPLIER,
+    /**
+     * Represents a drops multiplier party.
+     */
     DROPS_MULTIPLIER;
 
     /**

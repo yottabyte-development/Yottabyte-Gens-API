@@ -4,6 +4,7 @@ import dev.yottabyte.gens.api.generator.GeneratorDrop;
 import dev.yottabyte.gens.api.silo.SiloContent;
 import dev.yottabyte.gens.api.silo.SiloLocation;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -38,14 +39,14 @@ public interface PlayerSilo {
     void setLocation(SiloLocation location);
 
     /**
-     * Returns contents of the silo.
+     * Returns paginated contents of the silo.
      * <p>
-     * The key is the slot in the GUI and the value is the collected drops.
+     * The key is the page in the GUI and the value is the collected drops in that page.
      *
-     * @return the contents of the silo
+     * @return the paginated contents of the silo
      * @since 1.0
      */
-    ConcurrentHashMap<Integer, SiloContent> getContents();
+    ConcurrentHashMap<Integer, List<SiloContent>> getContents();
 
     /**
      * Clears all silo content

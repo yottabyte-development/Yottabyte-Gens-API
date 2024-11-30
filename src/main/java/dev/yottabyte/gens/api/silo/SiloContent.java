@@ -8,6 +8,13 @@ import dev.yottabyte.gens.api.generator.GeneratorDrop;
  * @since 1.0
  */
 public interface SiloContent {
+    /**
+     * Returns the index of the collected generator drop.
+     *
+     * @return the index of the collected generator drop
+     * @since 1.0
+     */
+    SiloContentIndex getIndex();
 
     /**
      * Returns the collected generator drop.

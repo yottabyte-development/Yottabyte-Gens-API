@@ -29,6 +29,27 @@ public interface SellManager {
     SellData sellMainHand(Player player);
 
     /**
+     * Sells an item for a player
+     *
+     * @param player    the player to sell the item for
+     * @param itemStack the item to sell
+     * @param amount    the amount of items to sell
+     * @return the {@link SellData} object containing the total item count, sell price, and sell level XP
+     * @since 1.0
+     */
+    SellData sellItem(Player player, ItemStack itemStack, int amount);
+
+    /**
+     * Sells an item for a player
+     *
+     * @param player    the player to sell the item for
+     * @param itemStack the item to sell
+     * @return the {@link SellData} object containing the total item count, sell price, and sell level XP
+     * @since 1.0
+     */
+    SellData sellItem(Player player, ItemStack itemStack);
+
+    /**
      * Sells all items in an inventory.
      *
      * @param player    the player to sell the items for

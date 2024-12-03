@@ -47,4 +47,15 @@ public interface MultiplierManager {
      * @since 1.0
      */
     boolean setPlayerMultiplier(UUID uuid, MultiplierType type, double multiplier);
+
+    /**
+     * Removes an amount from the player's multiplier.
+     *
+     * @param uuid       the player's UUID
+     * @param type       the multiplier type
+     * @param multiplier the multiplier value to remove
+     * @return <code>true</code> if the multiplier was removed; otherwise <code>false</code>
+     * @since 1.0
+     */
+    boolean removePlayerMultiplier(UUID uuid, MultiplierType type, double multiplier);
 }

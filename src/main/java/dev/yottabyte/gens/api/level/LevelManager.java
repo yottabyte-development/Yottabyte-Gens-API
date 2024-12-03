@@ -55,6 +55,24 @@ public interface LevelManager {
     void addPlayerXP(UUID uuid, long xp);
 
     /**
+     * Sets the player's level XP.
+     *
+     * @param uuid the player's UUID
+     * @param xp   the level XP to set
+     * @since 1.0
+     */
+    void setPlayerXP(UUID uuid, long xp);
+
+    /**
+     * Remove the player's level XP.
+     *
+     * @param uuid the player's UUID
+     * @param xp   the level XP to remove
+     * @since 1.0
+     */
+    void removePlayerXP(UUID uuid, long xp);
+
+    /**
      * Returns the total amount of XP required to level up.
      *
      * @param uuid the player's UUID

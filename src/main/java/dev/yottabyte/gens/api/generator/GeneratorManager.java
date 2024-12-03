@@ -1,6 +1,7 @@
 package dev.yottabyte.gens.api.generator;
 
 import dev.yottabyte.gens.api.data.player.PlayerGenerator;
+import dev.yottabyte.gens.api.generator.shop.GeneratorShop;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -234,4 +235,12 @@ public interface GeneratorManager {
      * @since 1.0
      */
     void openGeneratorUpgradeMenu(Player player, GeneratorLocation generatorLocation);
+
+    /**
+     * Returns the generator shop.
+     *
+     * @return the generator shop
+     * @since 1.0
+     */
+    GeneratorShop getGeneratorShop();
 }

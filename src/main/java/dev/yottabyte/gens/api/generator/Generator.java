@@ -23,6 +23,17 @@ public interface Generator {
     String getId();
 
     /**
+     * Returns the generator's color code.
+     * <p>
+     * This is specified in the generator's configuration file.
+     * The configuration section: <code>color</code>
+     *
+     * @return the color code for the generator
+     * @since 1.0
+     */
+    String getColor();
+
+    /**
      * Returns the generator's display name.
      * <p>
      * This is specified in the generator's configuration file.

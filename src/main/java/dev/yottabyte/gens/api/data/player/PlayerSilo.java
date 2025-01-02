@@ -75,10 +75,42 @@ public interface PlayerSilo {
     long getCollectedItems();
 
     /**
+     * Returns the total amount of collected xp in the silo.
+     *
+     * @return the total amount of collected xp
+     * @since 1.0
+     */
+    long getCollectedXp();
+
+    /**
+     * Returns the total amount of collected money in the silo.
+     *
+     * @return the total amount of collected money
+     * @since 1.0
+     */
+    double getCollectedMoney();
+
+    /**
      * Returns the total amount of collected items in the silo during its lifetime.
      *
      * @return the total amount of collected items during its lifetime
      * @since 1.0
      */
     long getLifetimeCollectedItems();
+
+    /**
+     * Returns the total amount of collected xp in the silo during its lifetime.
+     *
+     * @return the total amount of collected xp during its lifetime
+     * @since 1.0
+     */
+    long getLifetimeCollectedXp();
+
+    /**
+     * Returns the total amount of collected money in the silo during its lifetime.
+     *
+     * @return the total amount of collected money during its lifetime
+     * @since 1.0
+     */
+    double getLifetimeCollectedMoney();
 }

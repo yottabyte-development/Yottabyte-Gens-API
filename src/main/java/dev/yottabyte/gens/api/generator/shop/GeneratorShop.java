@@ -4,22 +4,12 @@ import dev.yottabyte.gens.api.generator.Generator;
 import dev.yottabyte.gens.api.sell.SellData;
 import org.bukkit.entity.Player;
 
-import java.util.SortedSet;
-
 /**
  * Represents a generator shop.
  *
  * @since 1.0
  */
 public interface GeneratorShop {
-    /**
-     * Returns the shop entries.
-     *
-     * @return the shop entries
-     * @since 1.0
-     */
-    SortedSet<GeneratorShopEntry> getShopEntries();
-
     /**
      * Sells a generator item in the player's inventory and returns the sell data.
      *

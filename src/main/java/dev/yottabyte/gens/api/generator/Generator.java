@@ -23,6 +23,17 @@ public interface Generator {
     String getId();
 
     /**
+     * Returns the generator's order. This is used to determine the order in which the generators are displayed.
+     * <p>
+     * This is specified in the generator's configuration file.
+     * The configuration section: <code>order</code>
+     *
+     * @return the generator order
+     * @since 1.0
+     */
+    int getOrder();
+
+    /**
      * Returns the generator's color code.
      * <p>
      * This is specified in the generator's configuration file.
@@ -43,6 +54,30 @@ public interface Generator {
      * @since 1.0
      */
     String getDisplayName();
+
+    /**
+     * Returns the buy price of the generator. (-1 if the generator cannot be bought).
+     *
+     * @return the buy price of the generator
+     * @since 1.0
+     */
+    double getBuyPrice();
+
+    /**
+     * Returns the sell price of the generator (-1 if the generator cannot be sold).
+     *
+     * @return the sell price of the generator
+     * @since 1.0
+     */
+    double getSellPrice();
+
+    /**
+     * Returns the buy level requirement of the generator. (0 if there is no requirement).
+     *
+     * @return the buy level requirement of generator
+     * @since 1.0
+     */
+    int getBuyLevelRequirement();
 
     /**
      * Returns the drop interval for the generator in seconds.

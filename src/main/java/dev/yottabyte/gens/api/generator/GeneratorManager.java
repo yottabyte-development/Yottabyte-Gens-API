@@ -9,6 +9,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.UUID;
 
 /**
@@ -26,13 +27,13 @@ public interface GeneratorManager {
     void reload();
 
     /**
-     * Returns an unmodifiable list of all loaded/registered generators.
+     * Returns a sorted set of all loaded/registered generators.
      *
-     * @return the list of all loaded/registered generators
+     * @return a sorted set of all loaded/registered generators
      * @see #getGeneratorIds
      * @since 1.0
      */
-    List<Generator> getGenerators();
+    SortedSet<Generator> getGenerators();
 
     /**
      * Returns an unmodifiable list of all generator IDs.
@@ -235,6 +236,14 @@ public interface GeneratorManager {
      * @since 1.0
      */
     void openGeneratorUpgradeMenu(Player player, GeneratorLocation generatorLocation);
+
+    /**
+     * Opens the generators menu for a player.
+     *
+     * @param player the player to open the menu for
+     * @since 1.0
+     */
+    void openGeneratorsMenu(Player player);
 
     /**
      * Returns the generator shop.

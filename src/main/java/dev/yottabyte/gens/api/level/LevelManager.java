@@ -1,6 +1,5 @@
 package dev.yottabyte.gens.api.level;
 
-import java.util.List;
 import java.util.UUID;
 
 /**
@@ -9,15 +8,6 @@ import java.util.UUID;
  * @since 1.0
  */
 public interface LevelManager {
-
-    /**
-     * Returns the registered/loaded levels.
-     *
-     * @return the list of levels
-     * @since 1.0
-     */
-    List<Level> getLevels();
-
     /**
      * Returns the player's level.
      *
@@ -31,10 +21,10 @@ public interface LevelManager {
      * Returns the player's next level.
      *
      * @param uuid the player's UUID
-     * @return the player's next level (null if the player is at the max level)
+     * @return the player's next level
      * @since 1.0
      */
-    Level getPlayerNextLevel(UUID uuid);
+    int getPlayerNextLevel(UUID uuid);
 
     /**
      * Returns the player's level XP.

@@ -3,11 +3,11 @@ package dev.yottabyte.gens.api.level;
 import java.util.List;
 
 /**
- * Represents a level
+ * Represents a level reward
  *
  * @since 1.0
  */
-public interface Level {
+public interface LevelReward {
     /**
      * Returns the level.
      *
@@ -15,14 +15,6 @@ public interface Level {
      * @since 1.0
      */
     int getLevel();
-
-    /**
-     * Returns the required XP to level-up.
-     *
-     * @return the required XP to level-up.
-     * @since 1.0
-     */
-    long getExperience();
 
     /**
      * Returns the list of commands to be run on level-up.

@@ -21,6 +21,14 @@ public interface GeneratorDrop {
     String getId();
 
     /**
+     * Returns the generator that this drop belongs to.
+     *
+     * @return the generator that this drop belongs to
+     * @since 1.0
+     */
+    Generator getGenerator();
+
+    /**
      * Returns the chance of the drop dropping. (a normalized value between 0 and 1)
      * <p>
      * This is specified in the generator's configuration file.

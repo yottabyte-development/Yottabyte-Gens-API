@@ -22,6 +22,18 @@ public interface MultiplierDataCalculator {
     /**
      * Returns the calculated {@link MultiplierData} for the player.
      *
+     * @param player the player to calculate the multiplier for
+     * @param sellWand <code>true</code> to add the sell wand multiplier, <code>false</code> to ignore it
+     * @param types  the multiplier types populate the {@link MultiplierData} with
+     * @return the calculated {@link MultiplierData}
+     * @since 1.0
+     */
+    MultiplierData getMultiplier(Player player, boolean sellWand, MultiplierType... types);
+
+
+    /**
+     * Returns the calculated {@link MultiplierData} for the player.
+     *
      * @param player   the player to calculate the multiplier for
      * @param sellWand the sell wand to calculate the multiplier for (can be <code>null</code>)
      * @param types    the multiplier types populate the {@link MultiplierData} with

@@ -12,6 +12,7 @@ import java.util.UUID;
  *
  * @since 1.0
  */
+@SuppressWarnings("unused")
 public interface PlayerData {
 
     /**
@@ -29,6 +30,24 @@ public interface PlayerData {
      * @since 1.0
      */
     boolean hasData();
+
+    /**
+     * Returns the player's statistics.
+     *
+     * @param statistic the statistic to get
+     * @return the tracked statistic
+     * @since 1.0
+     */
+    double getStatistic(PlayerStatistic statistic);
+
+    /**
+     * Increment a player's statistic.
+     *
+     * @param statistic the statistic to set
+     * @param amount    the amount to increment
+     * @since 1.0
+     */
+    void incrementStatistic(PlayerStatistic statistic, double amount);
 
     /**
      * Returns the maximum number of generators the player can have.

@@ -18,6 +18,15 @@ public interface LevelManager {
     int getPlayerLevel(UUID uuid);
 
     /**
+     * Sets the player's level.
+     *
+     * @param uuid  the player's UUID
+     * @param level the level to set
+     * @since 1.0
+     */
+    void setPlayerLevel(UUID uuid, int level);
+
+    /**
      * Returns the player's next level.
      *
      * @param uuid the player's UUID

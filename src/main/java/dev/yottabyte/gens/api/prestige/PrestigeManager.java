@@ -1,9 +1,11 @@
 package dev.yottabyte.gens.api.prestige;
 
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 /**
  * The manager for prestige related operations.
@@ -72,4 +74,13 @@ public interface PrestigeManager {
      * @since 1.0
      */
     void openPrestigeMenu(Player player);
+
+    /**
+     * Opens the prestige menu for a player.
+     *
+     * @param player       the player to open the menu for
+     * @param previousMenu a consumer that handles the previous menu's click events
+     * @since 1.0
+     */
+    void openPrestigeMenu(Player player, Consumer<InventoryClickEvent> previousMenu);
 }

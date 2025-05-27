@@ -3,6 +3,9 @@ package dev.yottabyte.gens.api.generator.shop;
 import dev.yottabyte.gens.api.generator.Generator;
 import dev.yottabyte.gens.api.sell.SellData;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
+
+import java.util.function.Consumer;
 
 /**
  * Represents a generator shop.
@@ -38,4 +41,13 @@ public interface GeneratorShop {
      * @since 1.0
      */
     void open(Player player);
+
+    /**
+     * Opens the generator shop menu for the player.
+     *
+     * @param player       the player to open the shop for
+     * @param previousMenu a consumer that handles the previous menu's click events
+     * @since 1.0
+     */
+    void open(Player player, Consumer<InventoryClickEvent> previousMenu);
 }

@@ -4,9 +4,11 @@ import dev.yottabyte.gens.api.data.player.PlayerSilo;
 import dev.yottabyte.gens.api.sell.SellData;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Optional;
+import java.util.function.Consumer;
 
 /**
  * The manager for all silo related operations.
@@ -111,6 +113,15 @@ public interface SiloManager {
      * @since 1.0
      */
     void openPlayerSiloMenu(Player player);
+
+    /**
+     * Opens the silo menu for a player.
+     *
+     * @param player       the player to open the menu for
+     * @param previousMenu a consumer that handles the previous menu's click events
+     * @since 1.0
+     */
+    void openPlayerSiloMenu(Player player, Consumer<InventoryClickEvent> previousMenu);
 
     /**
      * Sells the player's silo contents.

@@ -4,6 +4,7 @@ import dev.yottabyte.gens.api.data.player.PlayerGenerator;
 import dev.yottabyte.gens.api.generator.shop.GeneratorShop;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 /**
  * The manager for all generators related operations.
@@ -244,6 +246,15 @@ public interface GeneratorManager {
      * @since 1.0
      */
     void openGeneratorsMenu(Player player);
+
+    /**
+     * Opens the generators menu for a player.
+     *
+     * @param player       the player to open the menu for
+     * @param previousMenu a consumer that handles the previous menu's click events
+     * @since 1.0
+     */
+    void openGeneratorsMenu(Player player, Consumer<InventoryClickEvent> previousMenu);
 
     /**
      * Returns the generator shop.

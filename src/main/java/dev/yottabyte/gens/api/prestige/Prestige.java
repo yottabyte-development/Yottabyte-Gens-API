@@ -1,7 +1,5 @@
 package dev.yottabyte.gens.api.prestige;
 
-import java.util.List;
-
 /**
  * Represents a prestige threshold.
  *
@@ -32,12 +30,4 @@ public interface Prestige {
      * @since 1.0
      */
     int getRequiredLevel();
-
-    /**
-     * Returns the list of commands to be run on prestige-up.
-     *
-     * @return the list of commands to be run on prestige-up
-     * @since 1.0
-     */
-    List<String> getCommands();
 }

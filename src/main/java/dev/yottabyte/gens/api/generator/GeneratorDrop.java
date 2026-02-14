@@ -21,6 +21,17 @@ public interface GeneratorDrop {
     String getId();
 
     /**
+     * Returns the display name of the drop.
+     * <p>
+     * This is specified in the generator's configuration file.
+     * The configuration section: <code>drops.id.item.name</code>
+     *
+     * @return the display name of the drop
+     * @since 1.0
+     */
+    String getDisplayName();
+
+    /**
      * Returns the generator that this drop belongs to.
      *
      * @return the generator that this drop belongs to

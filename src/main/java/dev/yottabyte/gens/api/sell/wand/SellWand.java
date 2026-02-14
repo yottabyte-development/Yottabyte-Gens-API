@@ -20,6 +20,17 @@ public interface SellWand {
     String getId();
 
     /**
+     * Returns the display name of the sell wand.
+     * <p>
+     * This is specified in the sell wand's configuration file.
+     * The configuration section: <code>sell-wands.wand.item.name</code>
+     *
+     * @return the display name of the sell wand
+     * @since 1.0
+     */
+    String getDisplayName();
+
+    /**
      * Returns the money multiplier of the sell wand.
      * <p>
      * This is specified in the sell wand's configuration file.

@@ -6,6 +6,7 @@ import org.bukkit.Location;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Represents the data of a player.
@@ -24,12 +25,12 @@ public interface PlayerData {
     UUID getUuid();
 
     /**
-     * Checks if the player has any data.
+     * Checks if the player is synced with the data source.
      *
-     * @return <code>true</code> if the player has data; otherwise <code>false</code>
+     * @return <code>true</code> if the player is synced; otherwise <code>false</code>
      * @since 1.0
      */
-    boolean hasData();
+    AtomicBoolean getSynced();
 
     /**
      * Returns the player's statistics.

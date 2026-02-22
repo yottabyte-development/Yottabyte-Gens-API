@@ -3,6 +3,7 @@ package dev.yottabyte.gens.api.generator;
 import org.bukkit.Location;
 
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Represents a generator location.
@@ -97,15 +98,7 @@ public interface GeneratorLocation {
      * @return <code>true</code> if the generator location is synced; <code>false</code> otherwise.
      * @since 1.0
      */
-    boolean isSynced();
-
-    /**
-     * Sets whether the generator location is synced with the data source.
-     *
-     * @param synced <code>true</code> if the generator location is synced and <code>false</code> otherwise.
-     * @since 1.0
-     */
-    void setSynced(boolean synced);
+    AtomicBoolean getSynced();
 
     /**
      * Checks whether the generator location is deleted.

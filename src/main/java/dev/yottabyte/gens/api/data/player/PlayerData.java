@@ -214,7 +214,7 @@ public interface PlayerData {
      * @return the player's level (null if not set)
      * @since 1.0
      */
-    Integer getLevel();
+    Long getLevel();
 
     /**
      * Adds levels to the player.
@@ -222,7 +222,7 @@ public interface PlayerData {
      * @param level the amount of levels to add
      * @since 1.0
      */
-    void addLevel(int level);
+    void addLevel(long level);
 
     /**
      * Sets the player's level.
@@ -230,7 +230,7 @@ public interface PlayerData {
      * @param level the level to set
      * @since 1.0
      */
-    void setLevel(int level);
+    void setLevel(long level);
 
     /**
      * Returns the player's prestige level.

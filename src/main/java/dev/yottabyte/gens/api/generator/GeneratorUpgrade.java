@@ -36,5 +36,5 @@ public interface GeneratorUpgrade {
      * @return the required level of the upgrade
      * @since 1.0
      */
-    int getRequiredLevel();
+    long getRequiredLevel();
 }

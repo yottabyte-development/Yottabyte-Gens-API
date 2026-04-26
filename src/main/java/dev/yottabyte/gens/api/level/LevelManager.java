@@ -15,7 +15,7 @@ public interface LevelManager {
      * @return the player's level
      * @since 1.0
      */
-    int getPlayerLevel(UUID uuid);
+    long getPlayerLevel(UUID uuid);
 
     /**
      * Sets the player's level.
@@ -24,7 +24,7 @@ public interface LevelManager {
      * @param level the level to set
      * @since 1.0
      */
-    void setPlayerLevel(UUID uuid, int level);
+    void setPlayerLevel(UUID uuid, long level);
 
     /**
      * Returns the player's next level.
@@ -33,7 +33,7 @@ public interface LevelManager {
      * @return the player's next level
      * @since 1.0
      */
-    int getPlayerNextLevel(UUID uuid);
+    long getPlayerNextLevel(UUID uuid);
 
     /**
      * Returns the player's level XP.

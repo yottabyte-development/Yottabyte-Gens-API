@@ -77,7 +77,7 @@ public interface Generator {
      * @return the buy level requirement of generator
      * @since 1.0
      */
-    int getBuyLevelRequirement();
+    long getBuyLevelRequirement();
 
     /**
      * Returns the drop interval for the generator in seconds.

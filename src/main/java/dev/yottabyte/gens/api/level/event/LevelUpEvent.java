@@ -14,8 +14,8 @@ import org.jetbrains.annotations.NotNull;
 public class LevelUpEvent extends PlayerEvent {
     private static final HandlerList HANDLER_LIST = new HandlerList();
 
-    private final int previousLevel;
-    private final int newLevel;
+    private final long previousLevel;
+    private final long newLevel;
 
     /**
      * Creates a new instance of the event.
@@ -25,7 +25,7 @@ public class LevelUpEvent extends PlayerEvent {
      * @param newLevel      the player's new level
      * @since 1.0
      */
-    public LevelUpEvent(@NotNull Player player, int previousLevel, int newLevel) {
+    public LevelUpEvent(@NotNull Player player, long previousLevel, long newLevel) {
         super(player);
         this.previousLevel = previousLevel;
         this.newLevel = newLevel;
@@ -37,7 +37,7 @@ public class LevelUpEvent extends PlayerEvent {
      * @return the player's previous level
      * @since 1.0
      */
-    public int getPreviousLevel() {
+    public long getPreviousLevel() {
         return this.previousLevel;
     }
 
@@ -47,7 +47,7 @@ public class LevelUpEvent extends PlayerEvent {
      * @return the player's new level
      * @since 1.0
      */
-    public int getNewLevel() {
+    public long getNewLevel() {
         return this.newLevel;
     }
 

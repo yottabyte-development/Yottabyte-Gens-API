@@ -29,5 +29,5 @@ public interface Prestige {
      * @return the required player level to prestige
      * @since 1.0
      */
-    int getRequiredLevel();
+    long getRequiredLevel();
 }

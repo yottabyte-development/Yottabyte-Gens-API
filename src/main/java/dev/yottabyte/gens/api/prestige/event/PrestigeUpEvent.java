@@ -16,8 +16,8 @@ public class PrestigeUpEvent extends PlayerEvent {
     private static final HandlerList HANDLER_LIST = new HandlerList();
 
     private final Prestige prestige;
-    private final int previousLevel;
-    private final int newLevel;
+    private final long previousLevel;
+    private final long newLevel;
 
     /**
      * Creates a new instance of the event.
@@ -28,7 +28,7 @@ public class PrestigeUpEvent extends PlayerEvent {
      * @param newLevel      the player's new prestige level
      * @since 1.0
      */
-    public PrestigeUpEvent(@NotNull Player player, @NotNull Prestige prestige, int previousLevel, int newLevel) {
+    public PrestigeUpEvent(@NotNull Player player, @NotNull Prestige prestige, long previousLevel, long newLevel) {
         super(player);
         this.prestige = prestige;
         this.previousLevel = previousLevel;
@@ -51,7 +51,7 @@ public class PrestigeUpEvent extends PlayerEvent {
      * @return the player's previous prestige level
      * @since 1.0
      */
-    public int getPreviousLevel() {
+    public long getPreviousLevel() {
         return this.previousLevel;
     }
 
@@ -61,7 +61,7 @@ public class PrestigeUpEvent extends PlayerEvent {
      * @return the player's new prestige level
      * @since 1.0
      */
-    public int getNewLevel() {
+    public long getNewLevel() {
         return this.newLevel;
     }
 

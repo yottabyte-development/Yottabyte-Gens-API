@@ -238,7 +238,7 @@ public interface PlayerData {
      * @return the player's prestige level (null it not set)
      * @since 1.0
      */
-    Integer getPrestigeLevel();
+    Long getPrestigeLevel();
 
     /**
      * Adds prestige levels to the player.
@@ -246,7 +246,7 @@ public interface PlayerData {
      * @param prestigeLevel the amount of prestige levels to add
      * @since 1.0
      */
-    void addPrestigeLevel(int prestigeLevel);
+    void addPrestigeLevel(long prestigeLevel);
 
     /**
      * Sets the player's prestige level.
@@ -254,7 +254,7 @@ public interface PlayerData {
      * @param prestigeLevel the prestige level to set
      * @since 1.0
      */
-    void setPrestigeLevel(int prestigeLevel);
+    void setPrestigeLevel(long prestigeLevel);
 
     /**
      * Returns the player's money multiplier.

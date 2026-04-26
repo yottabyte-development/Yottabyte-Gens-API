@@ -13,7 +13,7 @@ public interface Prestige {
      * @return the prestige level
      * @since 1.0
      */
-    int getLevel();
+    long getLevel();
 
     /**
      * Returns the cost to prestige.

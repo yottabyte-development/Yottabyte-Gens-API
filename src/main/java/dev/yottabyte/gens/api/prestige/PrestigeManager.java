@@ -3,7 +3,6 @@ package dev.yottabyte.gens.api.prestige;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-import java.util.List;
 import java.util.UUID;
 import java.util.function.Consumer;
 
@@ -15,12 +14,13 @@ import java.util.function.Consumer;
 public interface PrestigeManager {
 
     /**
-     * Returns the registered/loaded prestige levels.
+     * Returns a prestige instance for the given level, computed from the formula.
      *
-     * @return the list of prestige levels
+     * @param level the prestige level
+     * @return the prestige for the given level
      * @since 1.0
      */
-    List<Prestige> getPrestiges();
+    Prestige getPrestige(long level);
 
     /**
      * Returns the player's prestige level.
@@ -29,7 +29,7 @@ public interface PrestigeManager {
      * @return the player's prestige level
      * @since 1.0
      */
-    int getPrestigeLevel(UUID uuid);
+    long getPrestigeLevel(UUID uuid);
 
     /**
      * Adds prestige levels to a player.
@@ -38,7 +38,7 @@ public interface PrestigeManager {
      * @param amount the amount to add
      * @since 1.0
      */
-    void addPrestigeLevel(UUID uuid, int amount);
+    void addPrestigeLevel(UUID uuid, long amount);
 
     /**
      * Returns the player's next prestige level.
@@ -47,13 +47,13 @@ public interface PrestigeManager {
      * @return the player's next prestige level (-1 if the player is at the max prestige level)
      * @since 1.0
      */
-    int getNextPrestigeLevel(UUID uuid);
+    long getNextPrestigeLevel(UUID uuid);
 
     /**
      * Returns the player's next prestige.
      *
      * @param uuid the player's UUID
-     * @return the player's next prestige (null if the player is at the max prestige level OR the next prestige level isn't loaded)
+     * @return the player's next prestige (null if the player is at the max prestige level)
      * @since 1.0
      */
     Prestige getNextPrestige(UUID uuid);

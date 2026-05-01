@@ -18,9 +18,18 @@ public interface PrestigeManager {
      *
      * @param level the prestige level
      * @return the prestige for the given level
+     * @throws IllegalArgumentException if the prestige level is higher than the max prestige level
      * @since 1.0
      */
-    Prestige getPrestige(long level);
+    Prestige getPrestige(long level) throws IllegalArgumentException;
+
+    /**
+     * Returns the max prestige level.
+     *
+     * @return the max prestige level
+     * @since 1.0
+     */
+    long getMaxPrestigeLevel();
 
     /**
      * Returns the player's prestige level.

@@ -9,6 +9,14 @@ import java.util.UUID;
  */
 public interface LevelManager {
     /**
+     * Returns the max level.
+     *
+     * @return the max level
+     * @since 1.0
+     */
+    long getMaxLevel();
+
+    /**
      * Returns the player's level.
      *
      * @param uuid the player's UUID
@@ -72,10 +80,10 @@ public interface LevelManager {
     void removePlayerXP(UUID uuid, long xp);
 
     /**
-     * Returns the total amount of XP required to level up.
+     * Returns the total amount of XP required to level up for the next level.
      *
      * @param uuid the player's UUID
-     * @return the total amount of XP required to level up (-1 if the player is at the max level OR the next level isn't loaded)
+     * @return the total amount of XP required to level up for the next level (0 if the player is at the max level OR the next level is the max level)
      * @since 1.0
      */
     long getPlayerNextLevelXP(UUID uuid);
@@ -84,7 +92,7 @@ public interface LevelManager {
      * Returns the player's remaining XP to level up.
      *
      * @param uuid the player's UUID
-     * @return the player's remaining XP to level up (-1 if the player is at the max level)
+     * @return the player's remaining XP to level up (0 if the player is at the max level)
      * @since 1.0
      */
     long getPlayerRemainingXP(UUID uuid);
